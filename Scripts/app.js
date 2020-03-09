@@ -1,3 +1,9 @@
+/***
+ * Author :- Karandeep
+ * Date :- March 8, 2020
+ * Description:- This is made as a part of test 2 of WEBD6201
+ */
+
 class Contact
 {
     constructor(contactName = "", emailAddress = "", contactNumber = "", contactMessage = "")
