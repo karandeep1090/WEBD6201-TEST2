@@ -101,8 +101,15 @@ let app;
         document.title = "WEBD6201 - Task List";
 
         // Task 1 a
+        //New Task Click Event
         $("#newTaskButton").on("click", function(){
-        
+            // Variable for getting task input 
+            var value= $('#taskTextInput').val();
+            // Variable for output
+            var html = '<li class="list-group-item" id="task"><span>'+value+
+                       '</span><span class="float-right"><button class="btn btn-outline-primary btn-sm editButton"><i class="fas fa-edit"></i><button class="btn btn-outline-danger btn-sm deleteButton"><i class="fas fa-trash-alt"></i></button></span></li>';
+            // Appending output variable to tasklist
+            $('#taskList').append(html);
         });
 
         // Task 1 b
@@ -112,7 +119,7 @@ let app;
 
         // Task 1 c
         $("ul").on("click", ".deleteButton", function(e,item){
-            
+        
         });
     }
 
