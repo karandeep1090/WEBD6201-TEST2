@@ -96,6 +96,7 @@ let app;
         });
     }
 
+    
     function DisplayTaskList()
     {
         document.title = "WEBD6201 - Task List";
@@ -114,12 +115,24 @@ let app;
 
         // Task 1 b
         $("ul").on("click", ".editButton", function(){
-            
+            function editing(){
+                document.getElementById("editTaskText");
+            }
+            document.getElementById("taskText").replaceWith(editing);
         });
 
         // Task 1 c
         $("ul").on("click", ".deleteButton", function(e,item){
-        
+            function cancel(){
+                document.getElementById("task").remove();
+            }
+            if (confirm("Are You Sure?")) {
+                cancel();
+            }
+            else{
+
+            }
+            
         });
     }
 
